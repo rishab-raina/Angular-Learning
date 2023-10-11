@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TranslateService } from './translate.service';
 import { TranslatePipe } from './translate.pipe';
 import { AppSettings } from '../AppSettings';
+import { CanActivateRouteGuard } from './can-activate-route.guard';
 
 export function setupTranslateFactory(service: TranslateService): Function {
   return () => service.use(AppSettings.language);
